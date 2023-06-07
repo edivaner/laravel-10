@@ -1,6 +1,11 @@
 <h1>Suporte {{$support->id}}</h1>
 <a href="{{route('support.index')}}"> Voltar </a>
 
+@if ($errors->any())
+    @foreach ($errors->all() as $error)
+        {{$error}}
+    @endforeach
+@endif
 
 <form action="{{route('support.update', $support->id)}}" method="POST">
     @csrf
