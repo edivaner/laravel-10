@@ -18,7 +18,7 @@ class Support extends Model
     public function status(): Attribute
     {
         return Attribute::make(
-            set: fn (SupportStatus $status) => $status->name,
+            set: fn (SupportStatus $status) => $status->name
         );
     }
 }
